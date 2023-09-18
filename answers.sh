@@ -86,6 +86,47 @@ INNER JOIN companies
 ON companies.name = employees.Company 
 WHERE Role='Graphic Designer'
 ------------------------------------------------------------------------------
+18-Find the person with the highest number of points in students:
+
+SELECT name FROM students
+WHERE points=(SELECT MAX(points) FROM students)
+-------------------------------------------------------------------------------
+19-Find the average of points in students:
+
+SELECT avg(points) FROM students
+-------------------------------------------------------------------------------
+20-Find the number of students that have 500 points:
+SELECT COUNT(*)
+FROM students
+WHERE points = 500;
+----------------------------------------------------------------------------------
+21-Find the names of students that contains 's':
+
+SELECT name
+FROM students
+WHERE name LIKE '%s%';
+--------------------------------------------------------------------------------
+22-Find all students based on the decreasing order of their points:
+
+SELECT *
+FROM students
+ORDER BY points DESC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
