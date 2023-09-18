@@ -58,6 +58,39 @@ WHERE Name = 'Layal'
 12-Remove Layal's record from students:
 DELETE FROM students
 WHERE name='Layal'
-"
+
+-----------------------------
+JOINTS:
+-----------------------------
+
+14-Produce a table that contains, for each employee, his/her name, company name, and company date:
+
+SELECT employees.name, companies.name, companies.Date 
+FROM employees
+INNER JOIN companies 
+on employees.company= companies.name
+-----------------------------------------------------------------------------
+15-Find the name of employees that work in companies made before 2000:
+
+SELECT employees.Name
+FROM employees
+INNER JOIN companies
+on companies.name= employees.Company 
+WHERE companies.Date <2000
+----------------------------------------------------------------------------
+16-Find the name of company that has a graphic designer:
+
+SELECT employees.Company
+FROM employees
+INNER JOIN companies
+ON companies.name = employees.Company 
+WHERE Role='Graphic Designer'
+------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
